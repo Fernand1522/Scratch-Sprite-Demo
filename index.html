@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin:0;padding:0;}
+.header {}
+.header img {margin:24px;margin-bottom:16px;}
+h1 {font-family:Arial,Helvetica,Sans-Serif;font-size:22px;margin-left:24px;margin-right:24px;}
+
+.navbar {}
+.iletisim {}
+.iletisim-tus-1 {margin:0;margin-left:24px;font-family:Arial,Helvetica,Sans-Serif;font-size:18px;}
+.iletisim-tus-2 {margin-left:24px;margin-top:12px;margin-bottom:16px;font-family:Arial,Helvetica,Sans-Serif;font-size:26px;}
+
+.il-marka-secim {padding:16px;background-color:rgb(255,220,221);}
+.il-marka-secim a {text-decoration: none;}
+.il-tus     {display:inline;padding:10px;margin:0;font-family:Arial,Helvetica,Sans-Serif;font-size:26px;background-color:white;border-radius:8px;border: 1px solid rgb(100,190,255);outline: rgb(220,220,255) solid 3px;}
+.marka-tus  {display:inline;padding:10px;margin:0;font-family:Arial,Helvetica,Sans-Serif;font-size:26px;background-color:white;border-radius:8px;border: 1px solid rgb(100,190,255);outline: rgb(220,220,255) solid 3px;}
+.il-marka-yazi {display:inline;padding:10px;margin:0;font-family:Arial,Helvetica,Sans-Serif;font-size:26px;background-color:transparent;}
+
+.etkilesimli-harita {width:60vw;}
+.etkilesimli-harita img {width:60vw;}
+
+.usta-liste {display:block;}
+.usta-liste a:nth-child(odd) > div {background-color: rgb(248, 248, 248);}
+.usta-liste a:nth-child(even) > div {background-color: rgb(255, 255, 255);}
+
+.liste-elemani {overflow: hidden;padding:32px;min-height:50px;max-height:86px;}
+
+.liste-elemani:active {
+  /* Standard Syntax */
+  background-image: linear-gradient(to bottom, #3b8fe0 0%, #4c99e4 100%);
+  
+  /* Optional: Adjust inner shadow to mimic 'press' */
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 3px rgba(0, 0, 0, 0.3) inset;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+color:white;
+
+}
+.liste-elemani img {border-radius:8px;background-color:rgb(220,220,220);border:solid;float:left;}
+.liste-yazi {float:left;padding:0;margin:0;padding-left:24px;}
+.ser-ylz {font-family:Arial,Helvetica,Sans-Serif;font-size:18px;padding:0;margin:0;color:gray;}
+.ser-nam {font-family:Arial,Helvetica,Sans-Serif;font-size:22px;padding:0;margin:0;}
+.ser-num {font-family:Arial,Helvetica,Sans-Serif;font-size:32px;padding:0;margin:0;font-weight:bold;}
+
+.footer {text-align:center;}
+.footer img {display:inline;padding:18px;padding-top:32px;}
+.footer-yazi {font-family:Arial,Helvetica,Sans-Serif;font-size:24px;font-style:italic;font-weight:bold;}
+.telif-yazi {font-family:Arial,Helvetica,Sans-Serif;font-size:16px;color:rgb(153, 51, 0);margin:18px;}
+
+.cizgi-1 {background-color:rgb(200,200,200);min-height:1px;max-height:1px;width:auto;}
+.cizgi-2 {background-color:rgb(255,200,201);min-height:1px;max-height:1px;width:auto;}
+.cizgi-3 {background-color:rgb(255,200,201);min-height:1px;max-height:1px;width:auto;}
+.cizgi-4 {background-color:rgb(190,190,190);min-height:1px;max-height:1px;width:auto;}
+
+#marka, #il {
+  /* Box and Border */
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  background-color: white;
+
+  /* Text and Font */
+  color: black;
+  font-family:Arial,Helvetica,Sans-Serif;
+  font-size: 26px;
+
+  /* Spacing and Size */
+  padding: 10px 15px;
+  width: auto;
+}
+
+</style>
+</head>
+
+<!-- BODY -->
+<body>
+
+<div class="header">
+<img src="img/kombiusta.svg">
+<h1>Kombinize her daim en yakınız</h1>
+</div>
+
+<div class="navbar">
+<div class="iletisim">
+<a href="#"><div class="iletisim-tus-1">İletişim & Danışma Canlı Destek 0 555 883 33 83  /  0 216 317 81 81</div></a>
+<a href="#"><div class="iletisim-tus-2">Servis Kaydetme Formu</div></a>
+</div>
+
+<div class="cizgi-1"></div><div class="cizgi-2"></div>
+<div class="il-marka-secim">
+
+
+<a href="#"><div class="il-tus">İstanbul 🔽</div></a><p class="il-marka-yazi">civarındaki</p>
+
+<a href="#"><div class="marka-tus">Airfel 🔽</div></a><p class="il-marka-yazi">kombi servisleri</p></div>
+
+<div class="cizgi-3"></div><div class="cizgi-4"></div>
+
+<br>
+<!--
+<div class="etkilesimli-harita"><img src="img/map/istanbul.png"></div>
+-->
+<div class="cizgi-1"></div><div class="cizgi-2"></div>
+<div class="il-marka-secim">
+
+<select id="il" name="il-secim">
+  <option value="">İl seçiniz</option>
+  <option value="adana">Adana</option>
+  <option value="adiyaman">Adıyaman</option>
+  <option value="afyon">Afyonkarahisar</option>
+  <option value="agri" disabled>Ağrı</option>
+<option value="aksaray" disabled>Aksaray</option>
+<option value="amasya" disabled>Amasya</option>
+</select>
+<p class="il-marka-yazi">civarındaki</p>
+
+<select id="marka" name="marka-secim">
+  <option value="">marka seçiniz</option>
+  <option value="adana">Airfel</option>
+  <option value="adiyaman">AC24</option>
+  <option value="afyon">Compy</option>
+  <option value="agri" disabled>Dialog</option>
+<option value="aksaray" disabled>Digifel Duo</option>
+<option value="amasya" disabled>Digifel Premix</option>
+</select>
+<p class="il-marka-yazi">kombi servisleri</p></div>
+
+
+
+
+<div class="cizgi-3"></div><div class="cizgi-4"></div>
+
+
+
+        <div class="usta-liste">
+            
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 1 -->
+                    <img src="https://placehold.co/80x80/28a745/ffffff?text=YS">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Yıldız Servis</p>
+                        <p class="ser-num">0 5XX 8XX XX XX</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 2 -->
+                    <img src="https://placehold.co/80x80/007bff/ffffff?text=GT">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Güler Teknik</p>
+                        <p class="ser-num">0 5XX 7XX YY YY</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 3 -->
+                    <img src="https://placehold.co/80x80/ffc107/333333?text=MI">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Mega Isıtma</p>
+                        <p class="ser-num">0 5XX 6XX ZZ ZZ</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 1 -->
+                    <img src="https://placehold.co/80x80/28a745/ffffff?text=YS">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Yıldız Servis</p>
+                        <p class="ser-num">0 5XX 8XX XX XX</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 2 -->
+                    <img src="https://placehold.co/80x80/007bff/ffffff?text=GT">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Güler Teknik</p>
+                        <p class="ser-num">0 5XX 7XX YY YY</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 3 -->
+                    <img src="https://placehold.co/80x80/ffc107/333333?text=MI">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Mega Isıtma</p>
+                        <p class="ser-num">0 5XX 6XX ZZ ZZ</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 1 -->
+                    <img src="https://placehold.co/80x80/28a745/ffffff?text=YS">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Yıldız Servis</p>
+                        <p class="ser-num">0 5XX 8XX XX XX</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 2 -->
+                    <img src="https://placehold.co/80x80/007bff/ffffff?text=GT">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Güler Teknik</p>
+                        <p class="ser-num">0 5XX 7XX YY YY</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="liste-elemani">
+                    <!-- Placeholder for Avatar 3 -->
+                    <img src="https://placehold.co/80x80/ffc107/333333?text=MI">
+                    <div class="liste-yazi">
+                        <p class="ser-ylz">☆☆☆☆☆</p>
+                        <p class="ser-nam">Mega Isıtma</p>
+                        <p class="ser-num">0 5XX 6XX ZZ ZZ</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+<div class="footer">
+<img src="img/kombiusta.svg">
+<p class="footer-yazi">Her marka ve model için. Kombiye dair ne varsa<br>Hizmet bizde...</p>
+<p class="telif-yazi">&copy; Icmarpak Html System Alright Reserved 2025 @ Kullanım koşulları ve gizlilik bildirimi @ Tüm hakları saklı tutulmaktadır @ sg20042023</p>
+</div>
+
+<script>
+document.querySelector('.dropbtn').addEventListener('click', function() {
+  document.getElementById("myDropdown").classList.toggle("show");
+});
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>
